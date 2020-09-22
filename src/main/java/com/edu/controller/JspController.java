@@ -13,7 +13,6 @@ public class JspController {
         @RequestMapping("/index")
         @ResponseBody
         public String jspIndex() {
-//            System.out.println("ip:"+ LogUtils.getIpAdress());
             return "jenkins sucess !";
         }
 
