@@ -7,7 +7,6 @@
     <groupId>com.hong.edu</groupId>
     <artifactId>springbootjsp</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>war</packaging>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -15,22 +14,34 @@
         <version>2.0.0.RELEASE</version>
     </parent>
 
+<!--    <build>-->
+<!--        <finalName>springbootjsp</finalName>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--                <configuration>-->
+<!--                    <executable>true</executable>-->
+<!--                    <jvmArguments>-Dfile.encoding=UTF-8</jvmArguments>-->
+<!--                    &lt;!&ndash;启动类完整类名&ndash;&gt;-->
+<!--                    <mainClass>com.edu.JspApp</mainClass>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </build>-->
     <build>
         <finalName>springbootjsp</finalName>
         <plugins>
+            <!-- Spring Boot Maven 插件 -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <executable>true</executable>
-                    <jvmArguments>-Dfile.encoding=UTF-8</jvmArguments>
-                    <!--启动类完整类名-->
-                    <mainClass>com.edu.JspApp</mainClass>
+                    <includeSystemScope>true</includeSystemScope>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 
     <dependencies>
         <!-- SpringBoot web 核心组件 -->
