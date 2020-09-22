@@ -13,7 +13,7 @@ public class JspController {
         @RequestMapping("/index")
         @ResponseBody
         public String jspIndex() {
-            return "jenkins sucess ok!!";
+            return "jenkins sucess ok!!!";
         }
 
 
